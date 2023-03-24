@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name=" Airline Reservation System">
+  <ClassDiagramComponents>
+    <Class name="AirlineReservationSystem" package="airline.reservation.system" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="airlines" package="airline.reservation.system" visibility="public" xPosition="20.0" yPosition="398.0">
+      <Fields>
+        <Field name="input" type="Scanner" visibility="package"/>
+        <Field name="pass" type="int" visibility="private"/>
+        <Field name="cost" type="String" visibility="private"/>
+        <Field name="durationTime" type="String" visibility="private"/>
+        <Field name="airline" type="String" visibility="private"/>
+        <Field name="time" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="admin" returnType="void" visibility="public"/>
+        <Method name="airline1" returnType="void" visibility="public"/>
+        <Method name="airline2" returnType="void" visibility="public"/>
+        <Method name="airline3" returnType="void" visibility="public"/>
+        <Method name="getAirline" returnType="String" visibility="public"/>
+        <Method name="getCost" returnType="String" visibility="public"/>
+        <Method name="getDurationTime" returnType="String" visibility="public"/>
+        <Method name="getTime" returnType="String" visibility="public"/>
+        <Method name="setCost" returnType="void" visibility="public">
+          <Argument type="String" name="cost"/>
+        </Method>
+        <Method name="setDurationTime" returnType="void" visibility="public">
+          <Argument type="String" name="durationTime"/>
+        </Method>
+        <Method name="setAirline" returnType="void" visibility="public">
+          <Argument type="String" name="airline"/>
+        </Method>
+        <Method name="setTime" returnType="void" visibility="public">
+          <Argument type="String" name="time"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="creditCard" package="airline.reservation.system" visibility="public" xPosition="412.0" yPosition="72.0">
+      <Fields>
+        <Field name="input" type="Scanner" visibility="package"/>
+        <Field name="cardNo" type="double" visibility="private"/>
+        <Field name="cardType" type="String" visibility="private"/>
+        <Field name="holderName" type="String" visibility="private"/>
+        <Field name="expiryDate" type="String" visibility="private"/>
+        <Field name="bankName" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package"/>
+      </Constructors>
+      <Methods>
+        <Method name="getCardNo" returnType="double" visibility="public"/>
+        <Method name="getCardType" returnType="String" visibility="public"/>
+        <Method name="getHolderName" returnType="String" visibility="public"/>
+        <Method name="getExpiryDate" returnType="String" visibility="public"/>
+        <Method name="getBankName" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FlightDescriptions" package="airline.reservation.system" visibility="public" xPosition="799.0" yPosition="303.0">
+      <Fields>
+        <Field name="input" type="Scanner" visibility="package"/>
+        <Field name="from" type="String" visibility="public"/>
+        <Field name="to" type="String" visibility="public"/>
+        <Field name="Arrival" type="String" visibility="public"/>
+        <Field name="Departure" type="String" visibility="public"/>
+        <Field name="Capacity" type="float" visibility="public"/>
+        <Field name="ClassDegree" type="String" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package"/>
+      </Constructors>
+      <Methods>
+        <Method name="getFrom" returnType="String" visibility="public"/>
+        <Method name="getTo" returnType="String" visibility="public"/>
+        <Method name="getArrival" returnType="String" visibility="public"/>
+        <Method name="getDeparture" returnType="String" visibility="public"/>
+        <Method name="getCapacity" returnType="float" visibility="public"/>
+        <Method name="getClassDegree" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FlightDescriptionScheduled" package="airline.reservation.system" visibility="public" xPosition="1946.0" yPosition="72.0">
+      <Fields>
+        <Field name="input" type="Scanner" visibility="package"/>
+        <Field name="mapFlightDescriptions" type="HashMap&lt;Integer, FlightDescriptions&gt;" visibility="package"/>
+        <Field name="mapScheduledFlight" type="HashMap&lt;Integer, ScheduledFlight&gt;" visibility="package"/>
+        <Field name="mapcreditCard" type="HashMap&lt;Integer, creditCard&gt;" visibility="package"/>
+        <Field name="cc" type="creditCard" visibility="package"/>
+        <Field name="reservationIDPassenger" type="int" visibility="private"/>
+        <Field name="fd" type="FlightDescriptions" visibility="package"/>
+        <Field name="sf" type="ScheduledFlight" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="addFlightDescriptions" returnType="void" visibility="public">
+          <Argument type="int" name="idReservation"/>
+        </Method>
+        <Method name="addScheduledFlight" returnType="void" visibility="public">
+          <Argument type="int" name="idReservation"/>
+        </Method>
+        <Method name="enterCreditCard" returnType="void" visibility="public">
+          <Argument type="int" name="reservationID"/>
+        </Method>
+        <Method name="getCreditCard" returnType="void" visibility="public">
+          <Argument type="int" name="reservationID"/>
+        </Method>
+        <Method name="getinforeservation" returnType="void" visibility="public">
+          <Argument type="int" name="reservationID"/>
+        </Method>
+        <Method name="getinfoAirLine" returnType="String" visibility="public">
+          <Argument type="int" name="reservationID"/>
+        </Method>
+        <Method name="getinfodate" returnType="String" visibility="public">
+          <Argument type="int" name="reservationID"/>
+        </Method>
+        <Method name="getinfofrom" returnType="String" visibility="public">
+          <Argument type="int" name="reservationID"/>
+        </Method>
+        <Method name="getinfoto" returnType="String" visibility="public">
+          <Argument type="int" name="reservationID"/>
+        </Method>
+        <Method name="cancelReservation" returnType="void" visibility="public">
+          <Argument type="int" name="reservationID"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="logIn" package="airline.reservation.system" visibility="public" xPosition="2497.0" yPosition="274.0">
+      <Fields>
+        <Field name="input" type="Scanner" visibility="package"/>
+        <Field name="userName" type="String" visibility="private"/>
+        <Field name="pass" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package"/>
+      </Constructors>
+      <Methods>
+        <Method name="setUserName" returnType="void" visibility="public">
+          <Argument type="String" name="userName"/>
+        </Method>
+        <Method name="setPass" returnType="void" visibility="public">
+          <Argument type="String" name="pass"/>
+        </Method>
+        <Method name="getUserName" returnType="String" visibility="public"/>
+        <Method name="getPass" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Passenger" package="airline.reservation.system" visibility="public" xPosition="2974.0" yPosition="290.0">
+      <Fields>
+        <Field name="input" type="Scanner" visibility="package"/>
+        <Field name="allpassengers" type="double" visibility="public" isStatic="true"/>
+        <Field name="numberOfPerson" type="double" visibility="public"/>
+        <Field name="fristName" type="String" visibility="private"/>
+        <Field name="lastName" type="String" visibility="private"/>
+        <Field name="person" type="personInfo" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="personInfo" name="person"/>
+          <Argument type="double" name="numberOfPerson"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="passengerInfo" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PassengersReservation" package="airline.reservation.system" visibility="public" xPosition="2839.0" yPosition="892.0">
+      <Fields>
+        <Field name="input" type="Scanner" visibility="package"/>
+        <Field name="mapPersonInfo" type="HashMap&lt;Integer, personInfo&gt;" visibility="package"/>
+        <Field name="mapPassenger" type="HashMap&lt;Integer, Passenger&gt;" visibility="package"/>
+        <Field name="maplog" type="HashMap&lt;logIn, Integer&gt;" visibility="package"/>
+        <Field name="i" type="int" visibility="public"/>
+        <Field name="reservationID" type="int" visibility="public"/>
+        <Field name="key" type="int" visibility="private"/>
+        <Field name="person" type="personInfo" visibility="package"/>
+        <Field name="passengers" type="Passenger" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="deleteUser" returnType="void" visibility="public"/>
+        <Method name="creatAcount" returnType="int" visibility="public"/>
+        <Method name="logIn" returnType="int" visibility="public"/>
+        <Method name="addperson" returnType="int" visibility="public">
+          <Argument type="int" name="i"/>
+        </Method>
+        <Method name="addpasenger" returnType="int" visibility="public"/>
+        <Method name="setReservationID" returnType="void" visibility="public">
+          <Argument type="int" name="reservationID"/>
+        </Method>
+        <Method name="setKey" returnType="void" visibility="public">
+          <Argument type="int" name="key"/>
+        </Method>
+        <Method name="getReservationID" returnType="int" visibility="public"/>
+        <Method name="getKey" returnType="int" visibility="public"/>
+        <Method name="personinfro" returnType="int" visibility="public">
+          <Argument type="int" name="key"/>
+        </Method>
+        <Method name="fullName" returnType="String" visibility="public">
+          <Argument type="int" name="reservationID"/>
+        </Method>
+        <Method name="pasengerinfo" returnType="int" visibility="public">
+          <Argument type="int" name="key"/>
+          <Argument type="int" name="reservationID"/>
+        </Method>
+        <Method name="cheack" returnType="Boolean" visibility="public">
+          <Argument type="int" name="reservationID"/>
+        </Method>
+        <Method name="cancelPassenger" returnType="void" visibility="public">
+          <Argument type="int" name="reservationIDPassenger"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="personInfo" package="airline.reservation.system" visibility="public" xPosition="2258.0" yPosition="786.0">
+      <Fields>
+        <Field name="input" type="Scanner" visibility="package"/>
+        <Field name="fristName" type="String" visibility="private"/>
+        <Field name="lastName" type="String" visibility="private"/>
+        <Field name="address" type="String" visibility="private"/>
+        <Field name="email" type="String" visibility="private"/>
+        <Field name="BirthDate" type="String" visibility="private"/>
+        <Field name="gender" type="String" visibility="private"/>
+        <Field name="phoneNum" type="double" visibility="private"/>
+        <Field name="dingresDesise" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getFristName" returnType="String" visibility="public"/>
+        <Method name="getLastName" returnType="String" visibility="public"/>
+        <Method name="getAddress" returnType="String" visibility="public"/>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="getBirthDate" returnType="String" visibility="public"/>
+        <Method name="getPhoneNum" returnType="double" visibility="public"/>
+        <Method name="isDingresDesise" returnType="boolean" visibility="public"/>
+        <Method name="getGender" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Reservations" package="airline.reservation.system" visibility="public" xPosition="20.0" yPosition="1019.0">
+      <Fields>
+        <Field name="input" type="Scanner" visibility="package"/>
+        <Field name="noOfTicket" type="int" visibility="package"/>
+        <Field name="mapticket" type="HashMap&lt;Integer, Ticket&gt;" visibility="package"/>
+        <Field name="t" type="Ticket" visibility="package"/>
+        <Field name="pr" type="PassengersReservation" visibility="package"/>
+        <Field name="reservationIDPassenger" type="int" visibility="private"/>
+        <Field name="fr" type="FlightDescriptionScheduled" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="quickReservation" returnType="int" visibility="public"/>
+        <Method name="getinfromationperson" returnType="void" visibility="public">
+          <Argument type="int" name="key"/>
+        </Method>
+        <Method name="getinfromationreservation" returnType="int" visibility="public">
+          <Argument type="int" name="key"/>
+          <Argument type="int" name="reservationIDPassenger"/>
+          <Argument type="int" name="noOfTicket"/>
+        </Method>
+        <Method name="cancelReservation" returnType="int" visibility="public">
+          <Argument type="int" name="reservationIDPassenger"/>
+          <Argument type="int" name="noOfTicket"/>
+        </Method>
+        <Method name="CreateAcount" returnType="int" visibility="public"/>
+        <Method name="login" returnType="void" visibility="public"/>
+        <Method name="addReservation" returnType="int" visibility="public"/>
+        <Method name="ticket" returnType="void" visibility="public">
+          <Argument type="int" name="reservationIDPassenger"/>
+        </Method>
+        <Method name="getTicket" returnType="int" visibility="public">
+          <Argument type="int" name="noOfTicket"/>
+        </Method>
+        <Method name="cancelTicket" returnType="int" visibility="public">
+          <Argument type="int" name="noOfTicket"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ScheduledFlight" package="airline.reservation.system" visibility="public" xPosition="383.0" yPosition="569.0">
+      <Fields>
+        <Field name="input" type="Scanner" visibility="package"/>
+        <Field name="FD" type="FlightDescriptions" visibility="package"/>
+        <Field name="t" type="String" visibility="private"/>
+        <Field name="al" type="airlines" visibility="package"/>
+        <Field name="x" type="int" visibility="package"/>
+        <Field name="cost" type="String" visibility="private"/>
+        <Field name="durationTime" type="String" visibility="private"/>
+        <Field name="airline" type="String" visibility="private"/>
+        <Field name="time" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="FlightDescriptions" name="FD"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="admin" returnType="void" visibility="public"/>
+        <Method name="ChooseAirline" returnType="void" visibility="public"/>
+        <Method name="infoFlightPassenger" returnType="void" visibility="public"/>
+        <Method name="getCost" returnType="String" visibility="public"/>
+        <Method name="getDurationTime" returnType="String" visibility="public"/>
+        <Method name="getAirline" returnType="String" visibility="public"/>
+        <Method name="getTime" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Ticket" package="airline.reservation.system" visibility="public" xPosition="1739.0" yPosition="802.0">
+      <Fields>
+        <Field name="input" type="Scanner" visibility="package"/>
+        <Field name="keyNo" type="int" visibility="private"/>
+        <Field name="reservationID" type="int" visibility="private"/>
+        <Field name="fullName" type="String" visibility="private"/>
+        <Field name="from" type="String" visibility="private"/>
+        <Field name="to" type="String" visibility="private"/>
+        <Field name="date" type="String" visibility="private"/>
+        <Field name="airline" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="int" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setReservationID" returnType="void" visibility="public">
+          <Argument type="int" name="reservationID"/>
+        </Method>
+        <Method name="setFullName" returnType="void" visibility="public">
+          <Argument type="String" name="fullName"/>
+        </Method>
+        <Method name="setFrom" returnType="void" visibility="public">
+          <Argument type="String" name="from"/>
+        </Method>
+        <Method name="setTo" returnType="void" visibility="public">
+          <Argument type="String" name="to"/>
+        </Method>
+        <Method name="setDate" returnType="void" visibility="public">
+          <Argument type="String" name="date"/>
+        </Method>
+        <Method name="setAirline" returnType="void" visibility="public">
+          <Argument type="String" name="airline"/>
+        </Method>
+        <Method name="getReservationID" returnType="int" visibility="public"/>
+        <Method name="getFullName" returnType="String" visibility="public"/>
+        <Method name="getFrom" returnType="String" visibility="public"/>
+        <Method name="getTo" returnType="String" visibility="public"/>
+        <Method name="getDate" returnType="String" visibility="public"/>
+        <Method name="getAirline" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="mapPassenger" source="airline.reservation.system.PassengersReservation" target="airline.reservation.system.Passenger" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;Integer, Passenger&gt;"/>
+    <HasRelation name="al" source="airline.reservation.system.ScheduledFlight" target="airline.reservation.system.airlines" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="FD" source="airline.reservation.system.ScheduledFlight" target="airline.reservation.system.FlightDescriptions" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="t" source="airline.reservation.system.Reservations" target="airline.reservation.system.Ticket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mapPersonInfo" source="airline.reservation.system.PassengersReservation" target="airline.reservation.system.personInfo" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;Integer, personInfo&gt;"/>
+    <HasRelation name="mapticket" source="airline.reservation.system.Reservations" target="airline.reservation.system.Ticket" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;Integer, Ticket&gt;"/>
+    <HasRelation name="fd" source="airline.reservation.system.FlightDescriptionScheduled" target="airline.reservation.system.FlightDescriptions" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="maplog" source="airline.reservation.system.PassengersReservation" target="airline.reservation.system.logIn" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;logIn, Integer&gt;"/>
+    <HasRelation name="mapcreditCard" source="airline.reservation.system.FlightDescriptionScheduled" target="airline.reservation.system.creditCard" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;Integer, creditCard&gt;"/>
+    <HasRelation name="mapScheduledFlight" source="airline.reservation.system.FlightDescriptionScheduled" target="airline.reservation.system.ScheduledFlight" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;Integer, ScheduledFlight&gt;"/>
+    <HasRelation name="cc" source="airline.reservation.system.FlightDescriptionScheduled" target="airline.reservation.system.creditCard" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="passengers" source="airline.reservation.system.PassengersReservation" target="airline.reservation.system.Passenger" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="fr" source="airline.reservation.system.Reservations" target="airline.reservation.system.FlightDescriptionScheduled" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="person" source="airline.reservation.system.PassengersReservation" target="airline.reservation.system.personInfo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mapFlightDescriptions" source="airline.reservation.system.FlightDescriptionScheduled" target="airline.reservation.system.FlightDescriptions" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;Integer, FlightDescriptions&gt;"/>
+    <HasRelation name="person" source="airline.reservation.system.Passenger" target="airline.reservation.system.personInfo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="sf" source="airline.reservation.system.FlightDescriptionScheduled" target="airline.reservation.system.ScheduledFlight" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pr" source="airline.reservation.system.Reservations" target="airline.reservation.system.PassengersReservation" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
